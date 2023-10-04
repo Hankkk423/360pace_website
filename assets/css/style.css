@@ -1,0 +1,150 @@
+/*** Basic ***/
+:root {
+    --primary-red: #ed1c24;
+    --primary-red-bg: #ed1c2440;
+    --primary-green: #3aaf4a;
+    --primary-orange: #f04f1e;
+    --page-padding-x: 120px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+body {
+    /* font-family: Garamond, sans-serif; */
+    /* font-family: "Times New Roman", Times, sans-serif; */
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1.15rem;
+    /* font-weight: 400; */
+    line-height: 1.5;
+    color: #222324;
+    background-color: #fff;
+    padding: 0 100px;
+}
+
+
+
+
+
+
+
+
+
+
+/*** Header ***/
+nav {
+    height: 40px;
+    width: 80%;
+    position: absolute;
+    right: 2%;
+    top: 3em;
+    cursor: pointer;
+    transition: .25s ease-in-out;
+}
+
+.menu-toggle {
+    width: 40px;
+    clear: both;
+    float: right;
+}
+
+.menu-toggle span.line {
+    display: block;
+    height: 4px;
+    width: 40px;
+    background-color: #f50a0a;
+    transition: .25s ease-in-out;
+}
+
+.menu-toggle .hamburger span.line {
+    margin-bottom: 0.45em;
+    clear: both;
+    float: right;
+}
+
+.menu-toggle .hamburger span.line:nth-child(1) {
+    width: 30px;
+    transition-delay: .25s;
+}
+
+.menu-toggle .hamburger span.line:nth-child(2) {
+    transition-delay: .325s;
+}
+
+.menu-toggle .hamburger span.line:nth-child(3) {
+    width: 20px;
+    transition-delay: .475s;
+}
+
+.menu-toggle .cross span.line {
+    width: 0px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.menu-toggle .cross span.line:nth-child(1) {
+    transform: rotate(45deg);
+    transition-delay: .0s;
+}
+
+.menu-toggle .cross span.line:nth-child(2) {
+    transform: rotate(-45deg);
+    transition-delay: .25s;
+}
+
+.menu-toggle.-is-active .hamburger span.line {
+    width: 0px;
+}
+
+.menu-toggle.-is-active #hamburger span:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.menu-toggle.-is-active #hamburger span:nth-child(2) {
+    transition-delay: .125s;
+}
+
+.menu-toggle.-is-active #hamburger span:nth-child(3) {
+    transition-delay: .25s;
+}
+
+.menu-toggle.-is-active .cross span.line:nth-child(1) {
+    width: 40px;
+    transition-delay: 1s;
+}
+
+.menu-toggle.-is-active .cross span.line:nth-child(2) {
+    width: 40px;
+    transition-delay: 1.25s;
+}
+
+.main-nav {
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s all;
+}
+
+.main-nav li {
+    display: inline-block;
+}
+
+.main-nav li a {
+    color: #0066ff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.main-nav li a:hover {
+    color: #ffbe61;
+}
+
+.main-nav.-is-open {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .25s;
+}
